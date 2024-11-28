@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <body>
   <div class="form-container">
-    <form method="post" actions="recebe-dados.php">
+    <form method="post" action="api/recebe-dados.php">
       <div>
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" required>
@@ -24,8 +24,13 @@
       </div>
       <div>
         <label for="fone">Celular</label>
-        <input type="tel" id="fone" name="fone" required pattern="[0-9]{2}
-                            [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999">
+        <input 
+          id="fone" 
+          name="fone" 
+          required 
+          pattern="[0-9]{10,11}" 
+          type="tel" 
+          placeholder="Digite o celular (com ou sem DDD)">
       </div>
       <div>
         <label for="hora-desejada">Hora desejada</label>
@@ -99,23 +104,23 @@
         <p>Meios de Transporte</p>
         <div class="checkbox-group">
           <div class="option">
-            <input type="checkbox" id="carro" name="meios_transporte" value="carro">
+            <input type="checkbox" id="carro" name="meios_transporte[]" value="Carro">
             <label for="carro">Carro</label>
           </div>
           <div class="option">
-            <input type="checkbox" id="aviao" name="meios_transporte" value="Aviao">
+            <input type="checkbox" id="aviao" name="meios_transporte[]" value="Aviao">
             <label for="aviao">Avião</label>
           </div>
           <div class="option">
-            <input type="checkbox" id="bicicleta" name="meios_transporte" value="Bicicleta">
+            <input type="checkbox" id="bicicleta" name="meios_transporte[]" value="Bicicleta">
             <label for="bicicleta">Bicicleta</label>
           </div>
           <div class="option">
-            <input type="checkbox" id="moto" name="meios_transporte" value="Moto">
+            <input type="checkbox" id="moto" name="meios_transporte[]" value="Moto">
             <label for="moto">Moto</label>
           </div>
           <div class="option">
-            <input type="checkbox" id="barco" name="meios_transporte" value="Barco">
+            <input type="checkbox" id="barco" name="meios_transporte[]" value="Barco">
             <label for="barco">Barco</label>
           </div>
         </div>
