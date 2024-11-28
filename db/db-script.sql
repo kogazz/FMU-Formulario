@@ -1,4 +1,8 @@
-CREATE DATABASE formulario;
+#'
+Rodar Script no SQL do XAMPP
+'#
+
+REATE DATABASE formulario;
 
 USE formulario;
 

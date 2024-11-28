@@ -25,12 +25,13 @@
       <div>
         <label for="fone">Celular</label>
         <input 
-          id="fone" 
-          name="fone" 
-          required 
-          pattern="[0-9]{10,11}" 
-          type="tel" 
-          placeholder="Digite o celular (com ou sem DDD)">
+            id="fone" 
+            name="fone" 
+            required 
+            type="tel" 
+            placeholder="Digite o celular" 
+            maxlength="15" 
+            oninput="formatPhone(this)">
       </div>
       <div>
         <label for="hora-desejada">Hora desejada</label>
