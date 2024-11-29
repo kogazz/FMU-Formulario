@@ -51,11 +51,16 @@ O formulário coleta informações como:
 
 ---
 
-## Estrutura dos Arquivos
+## Estrutura do Projeto
 
+### Diretórios e Arquivos
+
+- **/api/conexao.php**: Arquivo PHP para conexão com o banco de dados MySQL.
+- **/api/recebe-dados.php**: Processa e armazena os dados enviados pelo formulário no banco de dados.
+- **/assets/**: Diretório reservado para arquivos adicionais (não especificados no escopo atual).
 - **index.html**: Contém o formulário HTML e liga os arquivos de estilo e script.
-- **style.css**: Estilo para o formulário, incluindo alinhamento, cores, fontes e espaçamento.
 - **script.js**: Funções JavaScript para buscar informações de endereço via CEP, limpar o formulário e atualizar o valor do peso.
+- **style.css**: Estilo para o formulário, incluindo alinhamento, cores, fontes e espaçamento.
 
 ---
 
@@ -64,6 +69,8 @@ O formulário coleta informações como:
 - **HTML5**: Estruturação do formulário e seus componentes.
 - **CSS3**: Estilização da interface do usuário.
 - **JavaScript**: Funcionalidades como a busca pelo CEP e atualização de peso.
+- **PHP**: Manipulação e envio de dados para o banco de dados.
+- **MySQL**: Armazenamento dos dados submetidos.
 - **Web Service (ViaCEP)**: Para buscar informações de endereço pelo CEP.
 
 ---
@@ -75,6 +82,22 @@ O formulário coleta informações como:
 3. Preencha os campos obrigatórios e clique em **"Enviar"** para submeter os dados.
 4. Utilize o campo de CEP para preenchimento automático do endereço.
 5. Clique em **Limpar** para resetar o formulário.
+
+### Configurar o Ambiente com XAMPP
+
+1. Certifique-se de que o **XAMPP** está instalado no seu computador.
+2. Abra o **XAMPP Control Panel**.
+3. Inicie os módulos **Apache** e **MySQL** clicando em **Start**.
+
+### Configurar o Banco de Dados
+1. Acesse o phpMyAdmin no navegador:
+   ```text
+   http://localhost/phpmyadmin
+2. Clique na aba SQL.
+3. Cole e execute o script que está no arquivo db-script.sql para criar o banco de dados e a tabela.
+4. Para garantir que o formulário foi enviado corretamente e está conversando com o banco, digite a seguinte consulta:
+SELECT * FROM `dados`;
+
 
 ---
 

@@ -2,7 +2,7 @@
 Rodar Script no SQL do XAMPP
 '#
 
-REATE DATABASE formulario;
+CREATE DATABASE formulario;
 
 USE formulario;
 
